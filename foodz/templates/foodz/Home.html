@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+  <title>HSR</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- Favicons -->
+  <link href="{% static './img/logo.png' %}" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800' %}" rel="stylesheet">
+  <link href="{% static 'https://fonts.googleapis.com/css?family=Aclonica|Mansalva|New+Rocker|Rock+Salt&display=swap' %}"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  
+  <!-- Main Stylesheet File -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'lib/book-loader/dist/style.css' %}">
+  <link rel="stylesheet" href="{% static 'lib/jquery-number-counter/dist/style.css' %}">
+  
+</head>
+
+<body onload="startTime()">
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!-- logo -->
+        <h1 style="font-family: 'Rock Salt', cursive;"><a href="#">HS<span>R</span></a></h1>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#">Home</a></li>
+          <li><a href="{% url 'Indian' %}">Indian</a></li>
+          <li><a href="{% url 'foreign' %}">Foriegn</a></li>
+          <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
+          <li class="connect"><a href="{% url 'connect' %}">&nbsp;<?php echo $_SESSION['username']; ?></a></li>
+          <li><a href="logout.php">Logout</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+    <div class="intro-container">
+       <h1 class="mb-4 pb-0">Healthy and Sumptuous<br><span>Recipes</span></h1>
+      <p class="mb-4 pb-0">Recipes that matter and make your mouth water</p>
+      <div class="book">
+        <div class="inner">
+          <div class="left"></div>
+          <div class="middle"></div>
+          <div class="right"></div>
+        </div>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      </div>
+  </section>
+  <!-- intro -->
+
+  <main id="main">
+
+    <!--==========================
+      About Section
+    ============================-->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+        <h2><i class="fa fa-check-square-o fa-2x wow tada" data-wow-duration="2s" data-wow-iteration="20"></i>   Why choose us?</h2>
+            <p>We provide the most kitchen friendly and tasty recipes ever. <br>You can choose from a different variety of recipes to satisfy all kinds craving. <br> This is your ultimate DIY cookbook. </p>
+          </div>
+          <div class="col-lg-3 wow rollIn" data-wow-delay="1s">
+            
+            <h3><i class="fa fa-chevron-right" style="color: #f82249;"></i> Indian Recipes</h3>
+            <p>Authentic homegrown recipes. <br> You can take an Indian out of India, but you can never take India out of an Indian</p>
+          </div>
+          <div class="col-lg-3 wow rollIn"data-wow-delay=1.5s">
+            <h3><i class="fa fa-chevron-right" style="color: #f82249;"></i> Foriegn Recipes</h3>
+            <p>Wanna explore the different cuisines around the world? <br> This is your one stop destination <i class="fa fa-exclamation"></i></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!--==========================
+      Gallery Section
+    ============================-->
+      <section id="gallery" class="section-with-bg wow zoomInUp" data-wow-duration="2s" data-wow-delay="1s">
+
+      <div class="container">
+        <div class="section-header">
+          <h2>Gallery</h2>
+          <p>Take a sneek peek </p>
+        </div>
+      </div>
+      <br>
+      
+      <div class="owl-carousel gallery-carousel">
+        <a href="{% static 'img/gallery/1.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/1.jpg' %}" alt=""></a>
+        <a href="{% static 'img/gallery/2.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/2.jpg' %}" alt=""></a>
+        <a href="{% static 'img/gallery/3.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/3.jpg' %}" alt=""></a>
+        <a href="{% static 'img/gallery/4.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/4.jpg' %}" alt=""></a>
+        <a href="{% static 'img/gallery/5.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/5.jpg' %}" alt=""></a>
+        <a href="{% static 'img/gallery/6.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/6.jpg' %}" alt=""></a>
+        <a href="{% static 'img/gallery/7.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/7.jpg' %}" alt=""></a>
+        <a href="{% static 'img/gallery/8.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/8.jpg' %}" alt=""></a>
+        <a href="{% static 'img/gallery/9.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/9.jpg' %}" alt=""></a>
+        <a href="{% static 'img/gallery/10.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/10.jpg' %}" alt=""></a>
+        <a href="{% static 'img/gallery/11.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/11.jpg' %}" alt=""></a>
+        <a href="{% static 'img/gallery/12.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/12.jpg' %}" alt=""></a>
+        <a href="{% static 'img/gallery/13.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/13.jpg' %}" alt=""></a>
+        <a href="{% static 'img/gallery/14.jpg' %}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/14.jpg' %}" alt=""></a>
+      </div>
+      
+    </section>
+
+    
+    <!--==========================
+      Stats Section
+    ============================-->
+    <section id="stats" class="section-with-bg wow flipInX" data-wow-duration="4s">
+        <div class="counter col_fourth">
+          <i class="fa fa-eercast fa-2x" style="color: green;"></i>
+          <h2 class="timer count-title count-number" data-to="300" data-speed="10000"></h2>
+          <p class="count-text ">Veg Dishes</p>
+        </div>
+      
+        <div class="counter col_fourth">
+          <i class="fa fa-eercast fa-2x" style="color: red;"></i>
+          <h2 class="timer count-title count-number" data-to="300" data-speed="10000"></h2>
+          <p class="count-text ">Non-Veg Dishes</p>
+        </div>
+      
+        <div class="counter col_fourth">
+          <i class="fa fa-glass fa-2x"></i>
+          <h2 class="timer count-title count-number" data-to="180" data-speed="10000"></h2>
+          <p class="count-text ">Drinks</p>
+        </div>
+      
+        <div class="counter col_fourth end">
+          <i class="fa fa-spoon fa-2x" style="color: blue;"></i>
+          <h2 class="timer count-title count-number" data-to="180" data-speed="10000"></h2>
+          <p class="count-text ">Beverages</p>
+        </div>
+    </section>  
+    
+    <!--==========================
+      devs Section
+      ============================-->
+      <section id="devs" class="wow fadeInRight" data-wow-duration="2s">
+        <div class="container">
+        <div class="section-header">
+          <h2><i class="fa fa-heart heart"></i>&nbsp;&nbsp; The Developers &nbsp;&nbsp;<i class="fa fa-heart heart"></i></h2>
+          <p> Get to know our devs <br><i class="fa fa-handshake-o"></i></p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="1s">
+            <div class="speaker">
+              <img src="{% static 'img/devs/dummy.png' %}" alt="dev 1" class="img-fluid" >
+              <div class="details">
+                <h3><a href="speaker-details.html">Srujan S</a></h3>
+                <div class="social"> 
+                  <a href=""><i class="fa fa-instagram"></i></a>
+                  <a href=""><i class="fa fa-facebook"></i></a>
+                  <a href=""><i class="fa fa-google-plus"></i></a>
+                  <a href=""><i class="fa fa-linkedin-square"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="1.5s">
+            <div class="speaker">
+              <img src="{% static 'img/devs/dummy.png' %}" alt="Speaker 2" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Harsha K</a></h3>
+                <div class="social">
+              <a href=""><i class="fa fa-instagram"></i></a>
+              <a href=""><i class="fa fa-facebook"></i></a>
+              <a href=""><i class="fa fa-google-plus"></i></a>
+              <a href=""><i class="fa fa-linkedin-square"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="2s">
+            <div class="speaker">
+              <img src="{% static 'img/devs/dummy.png' %}" alt="Speaker 3" class="img-fluid" >
+              <div class="details">
+                <h3><a href="speaker-details.html">Rahul Kata</a></h3>
+                <div class="social">
+            <a href=""><i class="fa fa-instagram"></i></a>
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-google-plus-g"></i></a>
+            <a href=""><i class="fa fa-linkedin-square"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!--==========================
+      Subscribe Section
+    ============================-->
+    <section id="subscribe">
+      <div class="container wow fadeInUp" data-wow-duration="5s">
+        <div class="section-header">
+          <h2>Newsletter</h2>
+          <p>To get more appetizing and fresh recipes do subscribe.</p>
+        </div>
+        <form method="POST" action="mail.php">
+          <div class="form-row justify-content-center">
+            <div class="col-auto">
+              <input type="text" class="form-control" name='email' placeholder="Enter your Email">
+            </div>
+            <div class="col-auto">
+              <button type="submit">Subscribe</button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </section>
+
+
+  </main>
+
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <img src="{% static 'img/logo.png' %}" alt="HSR" class="wow heartBeat">
+            <p><i class="fa fa-copyright"></i> <strong>Healthy and Sumptuous Recipes</strong> <hr class="style">
+              This website is solely for project purpose and includes modified code snippets from various resources.The recipes included in this website are directly taken from online resources.</p>
+          </div>
+
+          <div class="col-lg-6 col-md-6 wrapper">
+            <script src='https://codepen.io/juliangarnier/pen/75efae7724dbc3c055e918057fc4aca5.js'></script>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>About Us</h4>
+            <p>
+              Students of Section I, <br>
+              PES University,<br>
+              Bangalore<br> <br>
+            </p>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="time">
+      <!-- <i class="fa fa-clock-o fa-2x"></i> &nbsp; &nbsp; <span id="clock"></span> -->
+      <i class="fa fa-laptop fa-2x"></i> &nbsp; &nbsp;<span id="screen_time"></span> &nbsp; seconds
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  
+  <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'lib/superfish/hoverIntent.js' %}"></script>
+  <script src="{% static 'lib/superfish/superfish.min.js' %}"></script>
+  <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+  <script src="{% static 'lib/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="{% static 'contactform/contactform.js' %}"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'lib/jquery-number-counter/dist/script.js' %}"></script>
+</body>
+
+</html> 
