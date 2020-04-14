@@ -1,0 +1,442 @@
+/*--------------------------------------------------------------
+# intro Section
+--------------------------------------------------------------*/
+
+#layout {
+  height: 130vh;
+  background-image: url("../img/subtle_bg/white-waves.png");
+}
+
+.dname {
+  padding-top: 18vh;
+  margin-left: 8vw;
+}
+.dname h1 {
+  font-size: 12vh;
+  font-family: "Aclonica", sans-serif;
+  font-weight: 500;
+  background: linear-gradient(
+    90deg,
+    rgba(1, 28, 0, 1) 0%,
+    rgba(0, 159, 42, 1) 35%,
+    rgba(1, 169, 49, 1) 56%,
+    rgba(22, 111, 48, 1) 81%,
+    rgba(67, 173, 79, 1) 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: rgb(0, 0, 0);
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 4s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+#layout hr.veg {
+  border: 0.5vh solid;
+  height: 0.4vh;
+  margin: 0;
+  width: 80%;
+  background-image: linear-gradient(
+    to right,
+    #ff9100,
+    #ffffff,
+    #ff1900,
+    #ff0000
+  );
+}
+
+#layout .rate {
+  margin-left: 8vw;
+  font-size: 5vh;
+}
+
+#layout .rate i {
+  /* float: left; */
+  letter-spacing: 1vw;
+}
+
+#showcase {
+  margin: 2vh auto;
+  width: 30vw;
+  height: 60vh;
+  float: left;
+}
+
+.accordion {
+  float: left;
+  width: 60vw;
+  height: 60vh;
+  margin-top: 6vh;
+  margin-left: 6vw;
+  box-shadow: 10px 10px 42px 5px rgba(0, 0, 0, 0.74);
+}
+
+.accordion ul {
+  width: 60vw;
+  display: table;
+  table-layout: fixed;
+  margin: 0;
+  padding: 0;
+}
+.accordion ul li {
+  display: table-cell;
+  vertical-align: bottom;
+  position: relative;
+  width: 15%; /* 100 / number of images */
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 500ms ease;
+  background-size: cover;
+}
+
+.accordion ul li:nth-child(1) {
+  background-image: url("../img/recipes/maloo/maloo.png");
+}
+.accordion ul li:nth-child(2) {
+  background-image: url("../img/recipes/maloo/maloo1.png");
+}
+.accordion ul li:nth-child(3) {
+  background-image: url("../img/recipes/maloo/maloo2.png");
+}
+.accordion ul li:nth-child(4) {
+  background-image: url("../img/recipes/maloo/maloo3.png");
+}
+
+.accordion ul:hover li,
+.accordion ul:focus-within li {
+  width: 13.333333%;
+}
+.accordion ul li:focus {
+  outline: none;
+}
+.accordion ul:hover li:hover,
+.accordion ul li:focus,
+.accordion ul:focus-within li:focus {
+  width: 60%;
+}
+
+.accordion ul:hover li {
+  width: 13.33% !important;
+}
+.accordion ul:hover li:hover {
+  width: 60% !important;
+}
+
+.info {
+  float: right;
+}
+fieldset {
+  font-family: sans-serif;
+  border: 10px ridge #b97d10;
+  background: rgb(245, 245, 245);
+  border-radius: 2vh;
+  padding-top: 4vh;
+  padding-left: 2.5vh;
+  height: 60vh;
+  width: 20vw;
+  margin-top: 5vh;
+  margin-right: 6vw;
+  line-height: 2.2;
+}
+
+fieldset legend {
+  background: #6a0c0b;
+  color: #fff;
+  width: 6vw;
+  padding: 0.1vh 0.8vw;
+  font-size: 8vh;
+  border-radius: 1vw;
+  margin-left: 2vw;
+  box-shadow: 15px 18px 25px 0px rgba(0, 0, 0, 0.75);
+}
+
+.info span {
+  color: #996300;
+  font-weight: 600;
+}
+
+.info label {
+  font-size: 3vh;
+}
+
+/*--------------------------------------------------------------
+# ingredients Section
+--------------------------------------------------------------*/
+
+#ingredients {
+  height: 90vh;
+  background: url("../img/subtle_bg/greek-vase.png");
+}
+
+#ingredients h2,
+#prep h2 {
+  margin-left: 25vw;
+  padding: 4vh;
+  font-size: 12vh;
+  font-family: "Rye", cursive;
+  color: rgb(83, 83, 83);
+}
+
+#ingredients h2 span,
+#prep h2 span {
+  text-decoration: underline;
+  text-decoration-color: #c00;
+}
+
+#ingredients ul {
+  list-style-type: none;
+  margin-left: 15vw;
+}
+
+#ingredients li {
+  position: relative;
+  margin: 0;
+  padding-bottom: 3vh;
+  padding-left: 1vw;
+  font-size: 3vh;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  letter-spacing: 0.2vw;
+  word-spacing: 0.6vw;
+}
+
+/* The actual line being placed before each list item, tweak width and color as appropriate */
+#ingredients li:before {
+  background-color: #c00;
+  width: 0.2vw;
+  content: "";
+  position: absolute;
+  top: 0vh;
+  bottom: 0vh;
+  left: 0.25vw;
+}
+
+/* Start the line further down on the first list item */
+#ingredients li:first-child:before {
+  top: 2.5vh;
+}
+
+/* Stop the line short on the final list item */
+#ingredients li:last-child:before {
+  height: 1.8vh;
+}
+
+/* Styles for the SVG bullet points */
+.bullet {
+  margin-left: -1.35vw;
+  width: 2vw;
+  fill: rgb(0, 0, 0);
+  float: left;
+  padding-right: 0.6vw;
+}
+.bullet.big {
+  width: 2vw;
+  margin-left: -1.35vw;
+  padding-right: 0.6vw;
+}
+
+#ingredients span {
+  margin-left: 2vw;
+}
+
+/*--------------------------------------------------------------
+# prep Section
+--------------------------------------------------------------*/
+
+#prep {
+  height: 180vh;
+}
+
+#prep div {
+  width: 80vw;
+  margin-left: 10vw;
+  height: 80vh;
+}
+
+#prep ol {
+  color: #c00;
+  list-style-type: none;
+}
+
+#prep ol li {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8vh;
+  font-weight: 700;
+  margin: 6vh;
+  font-style: italic;
+}
+
+#prep li p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3vh !important;
+  padding-left: 10vw;
+  color: #555;
+  font-size: 4vh;
+}
+
+#prep span {
+  position: absolute;
+  margin-bottom: 10vh;
+}
+
+#prep hr {
+  height: 0.2vh;
+  margin: 0;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    #ff9100,
+    #000000,
+    #ff1900,
+    #2d00a8
+  );
+}
+
+/*--------------------------------------------------------------
+# able_to_make_it Section
+--------------------------------------------------------------*/
+#able_to_make_it {
+  height: 30vh;
+  background: url("../img/subtle_bg/gplaypattern_@2X.png");
+}
+
+#able_to_make_it .heading,
+#stars .heading {
+  font-size: 9vh;
+  letter-spacing: 0.8vw;
+  padding-top: 8vh;
+  margin-left: 5vw;
+  word-spacing: 1.5vw;
+  font-weight: 700;
+}
+
+.heading--stroke-shadow {
+  color: #fbca03;
+  text-shadow: -2px 0 #0d1b1e, 0 -2px #0d1b1e, 2px 0 #0d1b1e, 0 2px #0d1b1e,
+    2px 2px #0d1b1e, -2px -2px #0d1b1e, -2px 2px #0d1b1e, 2px -2px #0d1b1e,
+    6px 6px #2dc7ff;
+}
+
+/*--------------------------------------------------------------
+# stars Section
+--------------------------------------------------------------*/
+#stars {
+  height: 75vh;
+}
+
+#stars .heading--stroke-shadow {
+  color: #aa0505;
+  text-shadow: -2px 0 #0d1b1e, 0 -2px #0d1b1e, 2px 0 #0d1b1e, 0 2px #0d1b1e,
+    2px 2px #0d1b1e, -2px -2px #0d1b1e, -2px 2px #0d1b1e, 2px -2px #0d1b1e,
+    6px 6px #fbca03;
+}
+
+#stars .heading {
+  font-size: 11vh;
+  padding-top: 4vh;
+}
+
+.cont {
+  width: 30vw;
+  margin-left: 20vw;
+  padding: 5vh 0;
+  background: #6a0c0b;
+  color: #eee;
+  border-radius: 5px;
+  border: 0.5vh solid #fbca03;
+  overflow: hidden;
+  margin-top: 5vh;
+}
+
+div.stars {
+  width: 25vw;
+  display: inline-block;
+}
+
+input.star {
+  display: none;
+}
+
+label.star {
+  float: right;
+  padding: 2.5vh;
+  font-size: 5vh;
+  color: rgb(255, 255, 255);
+  transition: all 0.3s;
+}
+
+input.star:checked ~ label.star:before {
+  content: "\f005";
+  color: #fd4;
+  transition: all 0.25s;
+}
+
+input.star-5:checked ~ label.star:before {
+  color: rgb(255, 225, 0);
+  text-shadow: 0 0 2.77vh rgb(255, 255, 255);
+}
+
+input.star-1:checked ~ label.star:before {
+  color: #f62;
+}
+
+label.star:hover {
+  transform: rotate(-15deg) scale(1.5);
+}
+
+label.star:before {
+  content: "\f006"; /*  fa-star-o [empty star icon code]  */
+  font-family: FontAwesome;
+}
+
+.rev-box {
+  overflow: hidden;
+  height: 0;
+  width: 100%;
+  transition: all 0.25s;
+}
+
+textarea.review {
+  background: #222;
+  border: none;
+  width: 100%;
+  height: 12vh;
+  font-size: 3vh;
+  margin-left: 2vw;
+  box-sizing: border-box;
+  color: #eee;
+}
+
+label.review {
+  display: block;
+  transition: opacity 0.25s;
+}
+
+input.star:checked ~ .rev-box {
+  height: 125px;
+  overflow: visible;
+}
+
+.rev-box button {
+  margin-top: 2vh;
+  margin-left: 12vw;
+}
+
+.butn {
+  padding: 1vh 2vh;
+  position: relative;
+  border: 2px solid white;
+  color: white;
+  background-color: transparent;
+  font-family: "Merriweather", serif;
+}

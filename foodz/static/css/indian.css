@@ -1,0 +1,579 @@
+/*--------------------------------------------------------------
+# common edits for one or more sections
+--------------------------------------------------------------*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1.titles {
+  font-size: 13vh;
+  padding-top: 5vh;
+  text-align: center;
+  font-family: "Luckiest Guy";
+  color: #fff;
+  text-shadow: 0px -6px 0 #212121, 0px -6px 0 #212121, 0px 6px 0 #212121,
+    0px 6px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px 0px 0 #212121,
+    6px 0px 0 #212121, -6px -6px 0 #212121, 6px -6px 0 #212121,
+    -6px 6px 0 #212121, 6px 6px 0 #212121, -6px 18px 0 #212121,
+    0px 18px 0 #212121, 6px 18px 0 #212121, 0 19px 1px rgba(0, 0, 0, 0.1),
+    0 0 6px rgba(0, 0, 0, 0.1), 0 6px 3px rgba(0, 0, 0, 0.3),
+    0 12px 6px rgba(0, 0, 0, 0.2), 0 18px 18px rgba(0, 0, 0, 0.25),
+    0 24px 24px rgba(0, 0, 0, 0.2), 0 36px 36px rgba(0, 0, 0, 0.15);
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  width: 80vw;
+  height: 65vh;
+  align-self: center;
+}
+
+.card--1 .card__img,
+.card--1 .card__img--hover {
+  background-image: url("../img/recipes/maloo/maloo.png");
+}
+
+.card--x .card__img,
+.card--x .card__img--hover {
+  background-image: url("../img/recipes/maloo/maloo.png");
+}
+
+.card__clock {
+  width: 1.5vw;
+  vertical-align: middle;
+  fill: #ff0000;
+}
+.card__time {
+  font-size: 2vh;
+  color: #fbca03;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.card__clock-info {
+  float: right;
+}
+
+.card__img {
+  visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 40vh;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card__info-hover {
+  position: absolute;
+  padding: 2.21vh;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+}
+
+.card__img--hover {
+  transition: 0.4s all ease-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: absolute;
+  height: 38vh;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  top: 0;
+}
+.card {
+  margin-right: 6vw;
+  margin-top: 6vh;
+  transition: all 1s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: rgba(6, 12, 34, 0.808);
+  width: 40vw;
+  border-radius: 2.5vh;
+  overflow: hidden;
+  box-shadow: 1vw 3vh 4vh -7px rgba(0, 0, 0, 0.74);
+}
+.card:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.356);
+  transform: scale(1.1, 1.1);
+}
+
+.card__category {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 2vh;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #cccccc;
+}
+
+.card__title {
+  margin-top: 3vh;
+  margin-bottom: 1vh;
+  font-family: "Roboto Slab", serif;
+}
+
+.card:hover .card__img--hover {
+  height: 100%;
+  opacity: 0.5;
+}
+
+.card:hover .card__info_left,
+.card:hover .card__info_right,
+.card:hover .card__info {
+  background: transparent;
+  position: relative;
+  font-weight: 1000;
+  transform: scale(1.1);
+  transition: all 0.4s;
+}
+
+.card:hover .card__info-hover {
+  opacity: 1;
+}
+/*--------------------------------------------------------------
+# bon_apetit Section
+--------------------------------------------------------------*/
+
+@import url(https://fonts.googleapis.com/css?family=Expletus+Sans:600);
+
+#bon_apetit {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Expletus Sans", cursive;
+  background-image: linear-gradient(
+      121deg,
+      rgba(6, 12, 34, 0.938) 0%,
+      #4b000e69 50%,
+      rgba(6, 12, 34, 0.938) 100%
+    ),
+    url("../img/indian.jpg");
+  background-size: cover;
+}
+
+#rotate {
+  color: #fffbf1;
+  text-shadow: 0 2.77vh 3.46vh #2e2e31, 0 5.54vh 8.31vh #2e2e31;
+  font-size: 15vh;
+  font-weight: 550;
+  text-decoration: none;
+  letter-spacing: -3px;
+  margin-top: 7vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#rotate:before,
+#rotate:after {
+  content: "";
+  padding: 0.9em 0.4em;
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  top: 50%;
+  display: block;
+  border: 2vh solid #f82249;
+  transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  animation: 6s infinite alternate ease-in-out tipsy;
+}
+
+#rotate:before {
+  border-color: #d9524a #d9524a rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  z-index: -1;
+}
+
+#rotate:after {
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #d9524a #d9524a;
+  box-shadow: 25px 25px 25px rgba(6, 12, 34, 0.795);
+}
+
+@-webkit-keyframes tipsy {
+  0 {
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+  }
+}
+
+@keyframes tipsy {
+  0 {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# options Section
+--------------------------------------------------------------*/
+#options {
+  height: 100vh;
+  background: #eee url("../img/subtle_bg/herringbone.png");
+}
+
+#pick {
+  font-family: "Open Sans", sans-serif;
+  color: #555;
+  margin: 0 auto;
+  margin-left: 8vw;
+  padding-top: 8vh;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 15vh;
+  font-weight: 550;
+  letter-spacing: -2px;
+  line-height: 1;
+  text-shadow: rgb(151, 151, 151) 3px 2px 0;
+  position: relative;
+}
+#pick:after {
+  content: "Take your pick !";
+  position: absolute;
+  left: 8vw;
+  top: 9.5vh;
+}
+#pick:after {
+  background-image: -webkit-linear-gradient(
+    left top,
+    transparent 0%,
+    transparent 25%,
+    #555 25%,
+    #555 50%,
+    transparent 50%,
+    transparent 75%,
+    #555 75%
+  );
+  background-size: 4px 4px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+  text-shadow: none;
+}
+
+#options #menu {
+  list-style: none;
+  padding: 5vh;
+  margin-top: 3vh;
+  border-top: 5px double rgb(0, 0, 0);
+  border-bottom: 5px double rgb(0, 0, 0);
+  position: relative;
+  text-align: center;
+}
+#options #menu li {
+  display: block;
+  width: 25vw;
+  margin: 5vh auto;
+  position: relative;
+  -webkit-transform: skewy(-5deg);
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: 400ms all;
+}
+#options #menu li a {
+  text-transform: uppercase;
+  font-family: "Squada One", cursive;
+  font-weight: 800;
+  display: block;
+  background: #fff;
+  padding: 0.8vh 0.8vh;
+  color: #333;
+  font-size: 3.5vh;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 0px #fff, 2px 2px 0px #999, 3px 3px 0px #fff;
+  background-image: -webkit-linear-gradient(
+    top,
+    transparent 0%,
+    rgb(0, 0, 0) 100%
+  );
+  -webkit-transition: 1s all;
+  background-image: -webkit-linear-gradient(
+    left top,
+    transparent 0%,
+    transparent 25%,
+    rgba(0, 0, 0, 0.15) 25%,
+    rgba(0, 0, 0, 0.15) 50%,
+    transparent 50%,
+    transparent 75%,
+    rgba(0, 0, 0, 0.15) 75%
+  );
+  background-size: 4px 4px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4) inset,
+    0 0 20px -5px rgba(0, 0, 0, 0.4), 0 0 0px 3px #fff inset;
+}
+#options #menu li:hover {
+  width: 30vw;
+  margin: 5vh auto;
+}
+#options #menu a:hover {
+  color: rgb(245, 0, 0);
+  font-size: 4vh;
+}
+#options #menu li:after,
+#options #menu li:before {
+  content: "";
+  position: absolute;
+  width: 6.7vh;
+  height: 100%;
+  background: rgb(173, 82, 82);
+  -webkit-transform: skewY(8deg);
+  z-index: -3;
+  border-radius: 4px;
+}
+#options #menu li:after {
+  background-image: -webkit-linear-gradient(
+    left,
+    transparent 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  right: 0;
+  top: -4px;
+}
+#options #menu li:before {
+  left: 0;
+  bottom: -4px;
+  background-image: -webkit-linear-gradient(
+    right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+}
+
+/*--------------------------------------------------------------
+# veg Section
+--------------------------------------------------------------*/
+#veg {
+  height: 170vh;
+  background: url("../img/subtle_bg/circles-and-roundabouts.png");
+  box-sizing: border-box;
+}
+
+.card__info {
+  z-index: 2;
+  color: #eee;
+  background-image: linear-gradient(
+    to right,
+    #207000,
+    #1a5c00,
+    #144700,
+    #0d2e00,
+    #092000,
+    #061600,
+    #061600,
+    #092000,
+    #0d2e00,
+    #144700,
+    #1a5c00,
+    #207000
+  );
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 5vh 1vw 4vh 2vw;
+}
+
+.card__info_left {
+  z-index: 2;
+  color: #eee;
+  background: linear-gradient(to left, #207000, #1f1c18);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 5vh 1vw 4vh 2vw;
+}
+
+.card__info_right {
+  z-index: 2;
+  color: #eee;
+  background: linear-gradient(to right, #207000, #1f1c18);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 5vh 1vw 4vh 2vw;
+}
+
+/*--------------------------------------------------------------
+# non-veg Section
+--------------------------------------------------------------*/
+
+#non_veg {
+  background: url("../img/subtle_bg/white-waves.png");
+  height: 170vh;
+  box-sizing: border-box;
+}
+
+#non_veg .card__info {
+  z-index: 2;
+  color: #eee;
+  background-image: linear-gradient(
+    to right,
+    #720b00,
+    #5a0900,
+    #4b0700,
+    #380f00,
+    #240a00,
+    #1a0000,
+    #1a0000,
+    #240a00,
+    #380f00,
+    #4b0700,
+    #5a0900,
+    #720b00
+  );
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 5vh 1vw 4vh 2vw;
+}
+
+#non_veg .card__info_left {
+  z-index: 2;
+  color: #eee;
+  background: linear-gradient(to left, #8e0e00, #1f1c18);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 5vh 1vw 4vh 2vw;
+}
+
+#non_veg .card__info_right {
+  z-index: 2;
+  color: #eee;
+  background: linear-gradient(to right, #8e0e00, #1f1c18);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 5vh 1vw 4vh 2vw;
+}
+
+#non_veg .card:hover .card__info_left,
+#non_veg .card:hover .card__info_right,
+#non_veg .card:hover .card__info {
+  background: transparent;
+  position: relative;
+  font-weight: 1000;
+  transform: scale(1.1);
+  transition: all 0.4s;
+}
+/*--------------------------------------------------------------
+# desserts Section
+--------------------------------------------------------------*/
+
+#desserts {
+  /* background: url(/img/subtle_bg/white-waves.png); */
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+#desserts .card__info {
+  z-index: 2;
+  color: #eee;
+  background-image: linear-gradient(
+    to right,
+    #26006d,
+    #180044,
+    #1b004d,
+    #0f002b,
+    #0f002b,
+    #1d0053,
+    #180044,
+    #26006d
+  );
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 5vh 1vw 4vh 2vw;
+}
+
+#desserts .card__info_left {
+  z-index: 2;
+  color: #eee;
+  background: linear-gradient(to left, #26006d, #1f1c18);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 5vh 1vw 4vh 2vw;
+}
+
+#desserts .card__info_right {
+  z-index: 2;
+  color: #eee;
+  background: linear-gradient(to right, #26006d, #1f1c18);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 5vh 1vw 4vh 2vw;
+}
+
+#desserts .card:hover .card__info_left,
+#desserts .card:hover .card__info_right,
+#desserts .card:hover .card__info {
+  background: transparent;
+  position: relative;
+  font-weight: 1000;
+  transform: scale(1.1);
+  transition: all 0.4s;
+}
+
+/*--------------------------------------------------------------
+# drinks Section
+--------------------------------------------------------------*/
+
+#drinks {
+  /* background: url(/img/subtle_bg/white-waves.png); */
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+#drinks .card__info {
+  z-index: 2;
+  color: #eee;
+  background-image: linear-gradient(
+    to right,
+    #1d0052,
+    #180044,
+    #140038,
+    #000000,
+    #000000,
+    #140038,
+    #180044,
+    #1d0052
+  );
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 5vh 1vw 4vh 2vw;
+}
+
+#drinks .card__info_left {
+  z-index: 2;
+  color: #eee;
+  background: linear-gradient(to left, #1d0052, #1f1c18);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 5vh 1vw 4vh 2vw;
+}
+
+#drinks .card__info_right {
+  z-index: 2;
+  color: #eee;
+  background: linear-gradient(to right, #1d0052, #1f1c18);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 5vh 1vw 4vh 2vw;
+}
+
+#drinks .card:hover .card__info_left,
+#drinks .card:hover .card__info_right,
+#drinks .card:hover .card__info {
+  background: transparent;
+  position: relative;
+  font-weight: 1000;
+  transform: scale(1.1);
+  transition: all 0.4s;
+}
